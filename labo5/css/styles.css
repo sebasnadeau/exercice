@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Cutive Mono";
+    src: url(polices/CutiveMono-Regular.ttf);
+}
+
+body {
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/*EN-TÊTE*/
+header{
+    background-color: grey;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 0.5rem red;
+    font-size: 2rem;
+    padding: 3rem;
+    font-family: "Cutive Mono", monospace;
+}
+
+/*PRINCIPAL*/
+main {
+    background-color: rgba(255,255,255,0.8);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3rem;
+}
+
+main h2{
+    border-bottom: 0.2rem solid grey;
+}
+
+main section {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#blocChoix{
+    border-right: 0.2rem solid grey;
+    padding-right: 1rem;
+}
+
+#blocChoix>div, #blocResume>div {
+    display: inline-block;
+    width: 40%;
+    height: 13rem;
+    vertical-align: top;
+    margin-left:1rem;
+    background-color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+#blocChoix>div:hover {
+    color: blue;
+}
+
+img {
+    width: 100%;
+}
+
+#blocResume {
+    padding: 1rem;
+}
+
+.choixActif {
+    border: 0.2rem solid green;
+}
+
+/*PIED DE PAGE*/
+footer{
+    background-color: grey;
+    padding: 3rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer p{
+    display: inline-block;
+    width: 40%;
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+
+
