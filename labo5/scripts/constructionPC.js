@@ -3,7 +3,7 @@
 let nomUtilisateurTxt= prompt("Quel est vôtre nom?");
 let bienvenuee= document.getElementById(bienvenue);
 bienvenue.innerText= "Bonjour " + nomUtilisateurTxt + ", bienvenue sur la page de construction de PC.";
-
+let zoneAffrichage= document.getElementById("blocResume");
 
 /*Fonctions appelées sur clic*/
 
@@ -13,9 +13,9 @@ function ajouterMoboAMD() {
     let carteMereAMDCopie= carteMereAMD.cloneNode(true);
     carteMereAMDCopie.id= "choixMoboAMD";
     let carteMereAMDExist= document.getElementById("choixMoboAMD");
-    
+    let carteIntelExist= document.getElementById("choixMoboIntel");
 
-    if (carteMereAMDExist == null) { 
+    if (carteMereAMDExist == null && carteIntelExist == null) { 
         let zoneAffrichage= document.getElementById("blocResume");
         zoneAffrichage.appendChild(carteMereAMDCopie);
         carteMereAMD.classList.add("choixActif");
@@ -24,6 +24,11 @@ function ajouterMoboAMD() {
         let carteIntel= document.getElementById("moboIntel");
         carteIntel.classList.remove("choixActif");
     }
+    else if(carteIntelExist != null)
+    {
+        zoneAffrichage.replaceChild(carteMereAMDCopie, carteIntelExist);
+    }
+
 
   
 
@@ -36,9 +41,9 @@ function ajouterMoboIntel() {
     let carteIntelCopie= carteIntel.cloneNode(true);
     carteIntelCopie.id = "choixMoboIntel";
     let carteIntelExist= document.getElementById("choixMoboIntel");
+    let carteMereAMDExist= document.getElementById("choixMoboAMD");    
 
-     if (carteIntelExist == null) {
-        let zoneAffrichage= document.getElementById("blocResume");
+     if (carteIntelExist == null && carteMereAMDExist == null) {
         zoneAffrichage.appendChild(carteIntelCopie);
         carteIntel.classList.add("choixActif");
     
@@ -46,6 +51,10 @@ function ajouterMoboIntel() {
         let carteMereAMD= document.getElementById("moboAMD");
         carteMereAMD.classList.remove("choixActif");
 
+    }
+    else if(carteIntelExist != null)
+    {
+        zoneAffrichage.replaceChild(carteIntelCopie, carteMereAMDExist);
     }
  
 
